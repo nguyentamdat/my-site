@@ -5,6 +5,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 This site is automatically built and deployed to **GitHub Pages** using the `pages.yml` workflow.
 
+The project uses Next.js export mode to generate static files. Because the site
+is served from `/my-site` on GitHub Pages, `next.config.ts` sets `basePath` and
+`assetPrefix` to `/my-site`. Running `npm run build` outputs the site to the
+`out` directory, which the workflow publishes automatically. Update these paths
+if you deploy to a different location.
+
 ## Getting Started
 
 First, run the development server:
